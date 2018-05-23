@@ -16,8 +16,8 @@ public class DatabaseAccess {
 	private ArrayList<Person> userdatabase = new ArrayList<Person>();			// create storage array list of users
 	private ArrayList<Relationship> relationdatabase = new ArrayList<Relationship>();
 	private Scanner sc = new Scanner(System.in);
-	private File file1 = new File(file_name_people.toString()); 				//finding file linked to path
-	private File file2 = new File(file_name_relations.toString());
+	private File file1 = new File(file_name_people.toString()); 				// finding people text file linked to path
+	private File file2 = new File(file_name_relations.toString());				// finding relationship text file linked to path
 	private Server hsqlServer = null;
 	private Connection connection = null;
 	
@@ -144,6 +144,7 @@ public void readinrelations() {
 	public ArrayList<Relationship> accessrelationsdatabase() {
 		return relationdatabase;
 	}
+	
 	
 	public void inserttodatabase(Person person1) {
 		Statement stmnt = null;
